@@ -1,29 +1,3 @@
-
-
-<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-top">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="p-5 bg-secondary text-white text-center opacity-75">
-  <h1>My First Bootstrap 5 Page</h1>
-  <p>Resize this responsive page to see the effect!</p>
-</div>-->
-
 <div class="container mt-5">
 <div class="card border-0 shadow my-5 opacity-75">
 <div class="card-body px-5">
@@ -47,7 +21,8 @@
       <p><small>Photo &#169;Jan Plezier</small></p>
       <p class="mt-2">You are invited on Vltava river cruise with food, dring and entertainment on <a href="https://janplezier.cz" target="_blank" style="text-decoration-style: dotted;" class="text-warning-emphasis">Jan Plezier</a>. However, you will need to reserve your spot <a href="#" data-bs-toggle="modal" data-bs-target="#reservationsModal" style="text-decoration-style: dotted;" class="text-warning-emphasis">by clicking here</a>.</p>
       <p>Departure: 14:30 <br> Arrival: 22:00<p>
-      <p>We will sail according to the enclosed <a href="https://www.google.com/maps/d/viewer?mid=1uYrqenkMbaz0WRuVISdGZvRWwLnmkBg&ll=50.052948887885776%2C14.426280249999989&z=12" target="_blank" style="text-decoration-style: dotted;" class="text-warning-emphasis">Google map</a> from the port near Čechův most in Prague south to Berounka River and back through Prague to Troja and then back again to Čechův most. The views of Hradčany and Prague Castle in the evening are expected to be speactacular and definitively worth it!</p>
+      <p>We will sail according to the enclosed <a href="https://www.google.com/maps/d/viewer?mid=1uYrqenkMbaz0WRuVISdGZvRWwLnmkBg&ll=50.052948887885776%2C14.426280249999989&z=12" target="_blank" style="text-decoration-style: dotted;" class="text-warning-emphasis">Google map</a> from the port near Čechův most in Prague south to Berounka River and back through Prague to Troja and then back again to Čechův most. </p>
+      <p>The views of Hradčany and Prague Castle in the evening are expected to be speactacular and definitively worth it!</p>
       <p>Lodging may be available for selected guests upon request.</p>
       <p>As per the <a href="https://www.google.com/maps/d/viewer?mid=1uYrqenkMbaz0WRuVISdGZvRWwLnmkBg&ll=50.052948887885776%2C14.426280249999989&z=12" target="_blank" style="text-decoration-style: dotted;" class="text-warning-emphasis">Google map</a> we may do a few short stops on the way to take on or drop off passengers.</p>
       <div class="mb-5">&nbsp;</div>
@@ -60,7 +35,7 @@
       </div>
     </div>
     <div class="col-sm-1 d-flex justify-content-end">
-      <a href="<?php echo base_url() . '/index.php/cs' ?>" class="text-decoration-none"><img src="/img/cz-flag-ex.png" alt=""></a>
+      <a href="<?php echo base_url() . '/index.php/cs' ?>" class="text-decoration-none text-secondary"><small>cs</small></a>
     </div>
   </div>
 
@@ -82,34 +57,34 @@
         <div class="row">
           <div class="col">
             <label for="fname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="fname" required>
+            <input type="text" class="form-control" id="fname" name="fname" required>
           </div>
           <div class="col">
             <label for="lname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lname" required>
+            <input type="text" class="form-control" id="lname" name = "lname" required>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col">
             <label for="phone" class="form-label">Cell Phone</label>
-            <input type="text" class="form-control" id="phone" required>
+            <input type="text" class="form-control" id="phone" name="phone" required>
           </div>
           <div class="col">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" id="email" name="email" required>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-sm-4">
             <label for="cnt" class="form-label">Number of Guests</label>
-            <input type="number" class="form-control" id="cnt" value="1">
+            <input type="number" class="form-control" id="cnt" name="cnt" value="1">
           </div>
 
         </div>
         <div class="row mt-3">
           <div class="col">
             <label for="reason" class="form-label">Relationship to Host (US Military brother or sister, good friend, etc.)</label>
-            <textarea class="form-control" id="reason" rows="3" required></textarea>
+            <textarea class="form-control" id="reason" name="reason" rows="3" required></textarea>
           </div>
         </div>
       </div>
@@ -153,27 +128,27 @@
         <div class="row mt-2">
           <div class="col">
             <label for="fname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="fname" required>
+            <input type="text" class="form-control" id="fname" name="fname" required>
           </div>
           <div class="col">
             <label for="lname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lname" required>
+            <input type="text" class="form-control" id="lname" name="lname" required>
           </div>
         </div>
         <div class="row mt-2">
             <div class="col-sm-6">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
+              <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="col-sm-6">
               <label for="subj" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="subj" required>
+              <input type="text" class="form-control" id="subj" name="subj" required>
             </div>
         </div>
         <div class="row mt-3">
           <div class="col">
             <label for="msg" class="form-label">Write something. Thanks in advance!</label>
-            <textarea class="form-control" id="msg" rows="3" required></textarea>
+            <textarea class="form-control" id="msg" name="msg" rows="3" required></textarea>
           </div>
         </div>
       </div>

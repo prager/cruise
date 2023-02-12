@@ -53,6 +53,7 @@ abstract class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
     		$this->home_mod = new \App\Models\Home_model();
+        $this->login_mod = new \App\Models\Login_model();
     		$this->uri = $this->request->uri;
         // E.g.: $this->session = \Config\Services::session();
     }

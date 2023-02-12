@@ -1,39 +1,16 @@
-
-
-<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-top">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="p-5 bg-secondary text-white text-center opacity-75">
-  <h1>My First Bootstrap 5 Page</h1>
-  <p>Resize this responsive page to see the effect!</p>
-</div>-->
-
 <div class="container mt-5">
 <div class="card border-0 shadow my-5 opacity-75">
 <div class="card-body px-5">
 <div class="d-flex justify-content-end">  </div>
 
   <div class="row mt-3">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
       <!-- Button trigger modal -->
       <a href="#" data-bs-toggle="modal" data-bs-target="#imgModal" class="text-warning-emphasis"><small>Mapa <i class="bi bi-box-arrow-up-right"></i></small> </a>
       <iframe src="https://www.google.com/maps/d/embed?mid=1uYrqenkMbaz0WRuVISdGZvRWwLnmkBg&ehbc=2E312F&z=12" width="275" height="850 frameborder="0" style="border:0" allowfullscreen" class="d-none d-lg-block"></iframe>
+    </div>
+    <div class="col-sm-1">
+      <small><a href="#"  data-bs-toggle="modal" data-bs-target="#login" class="text-decoration-none text-secondary"><i class="bi bi-person"></i></a></small>
     </div>
     <div class="col-sm-8">
       <h2>Pozvánka pro rodinu, přátele a hosty </h2>
@@ -63,7 +40,7 @@
       </div>
     </div>
     <div class="col-sm-1 d-flex justify-content-end">
-      <!--<a href="<?php echo base_url() . '/index.php/en' ?>" class="text-decoration-none"><img src="/img/us-flag-ex.png"></a>-->
+      <a href="<?php echo base_url() . '/index.php/en' ?>" class="text-decoration-none text-secondary"><small>en</small></a>
     </div>
   </div>
 </div>
@@ -186,6 +163,61 @@
   </div>
 </div>
 
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <form action="<?php echo base_url() . '/index.php/login' ?>" method="post">
+        <div class="modal-body">
+            <p class="lead">Enter your Username and Password</p>
+                <div class="mb-3">
+                    <label for="user" class="col-form-label">
+                        Username
+                    </label>
+                    <input type="text" class="form-control" id="user" name="user" placeholder="Enter Username"/>
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="col-form-label">
+                        Password
+                    </label>
+                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter Password"/>
+                </div>
+                <div class="mb-3">
+                  <p><small>Lost password? Click <a href="#" data-bs-toggle="modal" data-bs-target="#reset">here</a>
+                </div>
+        </div>
+        <div class="modal-footer">
+        <button type="submit" class="btn btn-primary"> Submit </button>
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reset" tabindex="-1" aria-labelledby="resetLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reset Your Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <form action="<?php echo base_url() . '/index.php/load-pass' ?>" method="post">
+        <div class="modal-body">
+          <p class="lead">Enter your Email</p>
+              <div class="mb-3">
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email"/>
+              </div>
+        </div>
+        <div class="modal-footer">
+        <button type="submit" class="btn btn-primary"> Submit </button>
+      </form>
+        </div>
+    </div>
+    </div>
+</div>
 <!--<div class="container mt-5">
 <div class="card border-0 shadow my-5 opacity-75">
 <div class="card-body p-5">
