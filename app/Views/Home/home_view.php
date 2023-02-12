@@ -10,7 +10,7 @@
       <iframe src="https://www.google.com/maps/d/embed?mid=1uYrqenkMbaz0WRuVISdGZvRWwLnmkBg&ehbc=2E312F&z=12" width="275" height="850 frameborder="0" style="border:0" allowfullscreen" class="d-none d-lg-block"></iframe>
     </div>
     <div class="col-sm-1">
-      <small><a href="#"  data-bs-toggle="modal" data-bs-target="#login" class="text-decoration-none text-secondary"><i class="bi bi-person"></i></a></small>
+      <!--<small><a href="#"  data-bs-toggle="modal" data-bs-target="#login" class="text-decoration-none text-secondary"><i class="bi bi-person"></i></a></small>-->
     </div>
     <div class="col-sm-8">
       <h2>Pozvánka pro rodinu, přátele a hosty </h2>
@@ -170,7 +170,8 @@
         <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      <form action="<?php echo base_url() . '/index.php/login' ?>" method="post">
+      <!--<form action="<?php echo base_url() . '/index.php/login' ?>" method="post">-->
+      <form action="#" method="post">
         <div class="modal-body">
             <p class="lead">Enter your Username and Password</p>
                 <div class="mb-3">
@@ -204,7 +205,8 @@
         <h5 class="modal-title" id="exampleModalLabel">Reset Your Password</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      <form action="<?php echo base_url() . '/index.php/load-pass' ?>" method="post">
+      <!--<form action="<?php echo base_url() . '/index.php/load-pass' ?>" method="post">-->
+      <form action="#" method="post">
         <div class="modal-body">
           <p class="lead">Enter your Email</p>
               <div class="mb-3">

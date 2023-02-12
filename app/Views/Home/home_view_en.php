@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="col-sm-1 d-flex justify-content-end">
-      <a href="<?php echo base_url() . '/index.php/cs' ?>" class="text-decoration-none text-secondary"><small>cs</small></a>
+      <a href="<?php echo base_url(); ?>" class="text-decoration-none text-secondary"><small>cs</small></a>
     </div>
   </div>
 
