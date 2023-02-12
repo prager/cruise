@@ -52,7 +52,8 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
+    		$this->home_mod = new \App\Models\Home_model();
+    		$this->uri = $this->request->uri;
         // E.g.: $this->session = \Config\Services::session();
     }
 }

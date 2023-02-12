@@ -46,6 +46,11 @@ $routes->get('/', 'Home::index');
  */
 
 $routes->add('cs', 'Home::cs');
+$routes->add('en', 'Home::en');
+$routes->add('send-res', 'Home::send_res');
+$routes->add('send-res-en', 'Home::send_res_en');
+$routes->add('send-msg', 'Home::send_msg');
+$routes->add('send-msg-en', 'Home::send_msg_en');
 
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
