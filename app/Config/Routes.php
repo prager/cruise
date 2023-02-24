@@ -48,10 +48,14 @@ $routes->get('/', 'Home::index');
 $routes->add('cs', 'Home::cs');
 $routes->add('en', 'Home::en');
 $routes->add('send-res', 'Home::send_res');
+$routes->add('upload-xyz', 'Home::upload');
 $routes->add('send-res-en', 'Home::send_res_en');
 $routes->add('send-msg', 'Home::send_msg');
 $routes->add('send-msg-en', 'Home::send_msg_en');
 $routes->add('change-user-pass/(:alphanum)', 'Home::change_user_pass');
+
+// Add this line.
+$routes->post('Home/do-upload', 'Home::do_upload');
 
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';

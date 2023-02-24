@@ -2,14 +2,18 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Files\File;
+
 class Home extends BaseController
 {
+    protected $helpers = ['form'];
+
     public function index()
     {
         //return view('welcome_message');
         $data['msg'] = "";
         echo view('Template/header.php');
-        echo view('Home/home_view.php', $data);
+        echo view('Home/home_view_en.php', $data);
         echo view('Template/footer.php');
     }
 
@@ -112,7 +116,7 @@ class Home extends BaseController
       echo view('Home/home_view.php', $data);
       echo view('Template/footer.php');
     }
-    
+
     public function change_user_pass() {
     		echo view('template/header');
     		$param['flag'] = TRUE;
@@ -146,6 +150,25 @@ class Home extends BaseController
     			}
     		}
 
-    		echo view('template/footer');
+    		echo view('Template/footer');
     	}
+
+      public function upload() {
+        echo view('Template/header.php');
+        echo view('Home/upload_view.php', ['errors' => []]);
+        echo view('Template/footer');
+      }
+
+      public function do_upload() {
+      echo view('Template/header.php');
+      $img = $this->request->getFile('userfile');
+      if (! $img->hasMoved()) {
+            $filepath = WRITEPATH . 'uploads/' . $img->store();
+
+            $data = ['uploaded_fileinfo' => new File($filepath)];
+            echo view('Home/file_success_view.php', $data);
+        }
+
+      echo view('Template/footer');
+    }
 }
