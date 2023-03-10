@@ -1,0 +1,10 @@
+CRITICAL - 2023-01-24 05:39:26 --> call_user_func() expects parameter 1 to be a valid callback, class 'Kint\Renderer\Rich\MicrotimePlugin' not found
+in SYSTEMPATH/ThirdParty/Kint/Renderer/RichRenderer.php on line 403.
+ 1 SYSTEMPATH/ThirdParty/Kint/Kint.php(258): Kint\Renderer\RichRenderer->preRender()
+ 2 SYSTEMPATH/ThirdParty/Kint/Kint.php(575): Kint\Kint->dumpAll([...], [...])
+ 3 SYSTEMPATH/Debug/Toolbar.php(402): Kint\Kint::dump('ROOTPATH/public')
+ 4 SYSTEMPATH/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 5 SYSTEMPATH/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 6 SYSTEMPATH/CodeIgniter.php(519): CodeIgniter\Filters\Filters->run('/', 'after')
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
