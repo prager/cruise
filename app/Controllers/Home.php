@@ -10,9 +10,10 @@ class Home extends BaseController
 
     public function index()
     {
+        //return view('welcome_message');
         $data['msg'] = "";
         echo view('Template/header.php');
-        echo view('Home/home_view.php', $data);
+        echo view('Home/home_view_en.php', $data);
         echo view('Template/footer.php');
     }
 
@@ -31,7 +32,7 @@ class Home extends BaseController
     }
 
     public function send_res() {
-
+      //this is for Czech
       $param['lname'] = $this->request->getPost('lname');
       $param['fname'] = $this->request->getPost('fname');
       $param['email'] = $this->request->getPost('email');
