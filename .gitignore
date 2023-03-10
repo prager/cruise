@@ -19,3 +19,5 @@ application/logs/*
 .remote-sync.json
 .env
 app/Config/Database.php
+
+app/sftp-config.json

@@ -10,10 +10,9 @@ class Home extends BaseController
 
     public function index()
     {
-        //return view('welcome_message');
         $data['msg'] = "";
         echo view('Template/header.php');
-        echo view('Home/home_view_en.php', $data);
+        echo view('Home/home_view.php', $data);
         echo view('Template/footer.php');
     }
 
