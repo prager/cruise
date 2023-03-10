@@ -32,7 +32,6 @@ class Home extends BaseController
     }
 
     public function send_res() {
-      //this is for Czech
       $param['lname'] = $this->request->getPost('lname');
       $param['fname'] = $this->request->getPost('fname');
       $param['email'] = $this->request->getPost('email');
@@ -55,7 +54,6 @@ class Home extends BaseController
     }
 
     public function send_res_en() {
-      //for English
       $param['lname'] = $this->request->getPost('lname');
       $param['fname'] = $this->request->getPost('fname');
       $param['email'] = $this->request->getPost('email');
